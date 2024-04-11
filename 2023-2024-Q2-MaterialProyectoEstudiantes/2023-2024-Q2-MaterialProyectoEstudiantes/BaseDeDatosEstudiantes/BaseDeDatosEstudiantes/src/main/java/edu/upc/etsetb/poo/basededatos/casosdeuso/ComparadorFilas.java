@@ -31,7 +31,9 @@ public class ComparadorFilas implements Comparator<FilaDatos> {
      * comparadas. Si 'false', el inverso.
      */
     public ComparadorFilas(String claveAComparar, boolean ascendente) {
-        throw new UnsupportedOperationException("ComparadorFilas::ComparadorFilas(claveAComparar,ascendente) no implementado.");
+        this.claveAComparar = claveAComparar;
+        this.ascendente = ascendente;
+        //throw new UnsupportedOperationException("ComparadorFilas::ComparadorFilas(claveAComparar,ascendente) no implementado.");
     }
 
     /**
