@@ -1,0 +1,15 @@
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/corrector/TestSuite.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/busqueda/CriterioMayorQueTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/dominio/tabla/FilaDatosTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/dominio/esquema/EsquemaTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/iu/InterfazUsuarioParaCorrector.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/corrector/TestAll.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/busqueda/CriterioIgualTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/busqueda/CriterioContieneTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/ControladorTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/ComparadorFilasTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/CorrectorException.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/dominio/tabla/Tabla2Test.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/dominio/esquema/ClaveTest.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/dominio/tabla/Tabla1Test.java
+/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatosEstudiantes/src/test/java/edu/upc/etsetb/poo/basededatos/casosdeuso/busqueda/CriterioMenorQueTest.java
