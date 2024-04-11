@@ -1,0 +1,24 @@
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatos/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatos/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'BaseDeDatos 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/Users/JuanCarlos/Sincronizados/NetBeansProjects/proyectos/Docencia/poo/proyectos/2023-2024-Q2/BaseDeDatos/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'BaseDeDatos 1.0-SNAPSHOT API'
