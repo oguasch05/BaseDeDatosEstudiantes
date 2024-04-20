@@ -36,14 +36,13 @@ public class Tabla {
      */
     private List<FilaDatos> filas;
 
-    /** 
+    /**
      * Constructor sin argumentos para el corrector: ¡NO TOCAR!
      */
-    public Tabla(){
-        
+    public Tabla() {
+
     }
-    
-    
+
     /**
      * Intancia una tabla, dado un nombre y un esquema
      *
@@ -51,7 +50,10 @@ public class Tabla {
      * @param esquema {@link #esquema} de la tabla
      */
     public Tabla(String nombre, Esquema esquema) {
-        throw new UnsupportedOperationException("Tabla::Tabla(nombre,esquema) no implementado.");
+        this.nombre = nombre;
+        this.esquema = esquema;
+        filas = new LinkedList<>();
+        //throw new UnsupportedOperationException("Tabla::Tabla(nombre,esquema) no implementado.");
     }
 
     /**
@@ -71,7 +73,26 @@ public class Tabla {
      * existente en el esquema
      */
     public void anyade(FilaDatos datos) throws ValorClaveUnicaException, ClaveInexistenteException {
-        throw new UnsupportedOperationException("Tabla::anyade(datos) no implementado.");
+
+        datos.valida(esquema);
+        Iterator<Clave> claves = esquema.iterator();
+        while (claves.hasNext()) {
+            Clave clave = claves.next();
+            String valorAComprobar = datos.get(clave.getNombre());
+            if (clave.isUnica()) {
+                Iterator<FilaDatos> it1 = filas.iterator();
+                while (it1.hasNext()) {
+                    FilaDatos next = it1.next();
+                    String valor = next.get(clave.getNombre());
+                    if(valor!=null&&valor.equals(valorAComprobar)){
+                        throw new ValorClaveUnicaException(clave.getNombre(), next.get(clave.getNombre()));
+                    }
+                }
+            }
+
+        }
+        filas.add(datos);
+        //throw new UnsupportedOperationException("Tabla::anyade(datos) no implementado.");
     }
 
     /**
@@ -81,7 +102,9 @@ public class Tabla {
      * @return Devuelve una lista con todas las {@link FilaDatos} de la tabla.
      */
     public List<FilaDatos> buscaTodo() {
-        throw new UnsupportedOperationException("Tabla::buscaTodo() no implementado.");
+        List<FilaDatos> filascopy = filas;
+        return filascopy;
+        //throw new UnsupportedOperationException("Tabla::buscaTodo() no implementado.");
     }
 
     /**
@@ -98,7 +121,17 @@ public class Tabla {
      * el criterio pasado por parámetro.
      */
     public List<FilaDatos> busca(Criterio criterio) {
-        throw new UnsupportedOperationException("Tabla::busca(criterio) no implementado.");
+        List<FilaDatos> lista = filas;
+        Iterator<FilaDatos> it = lista.iterator();
+        int i = 0;
+        while (it.hasNext()) {
+            if (criterio.esCumplido(it.next())) {
+                lista.remove(i);
+            }
+            i++;
+        }
+        return lista;
+        //throw new UnsupportedOperationException("Tabla::busca(criterio) no implementado.");
     }
 
     /**
@@ -116,7 +149,17 @@ public class Tabla {
      * o una lista vacía si no ha eliminado ninguna.
      */
     public List<FilaDatos> elimina(Criterio criterio) {
-        throw new UnsupportedOperationException("Tabla::elimina(criterio) no implementado.");
+        List<FilaDatos> lista = filas;
+        Iterator<FilaDatos> it = lista.iterator();
+        int i = 0;
+        while (it.hasNext()) {
+            if (!criterio.esCumplido(it.next())) {
+                lista.remove(i);
+            }
+            i++;
+        }
+        return lista;
+        //throw new UnsupportedOperationException("Tabla::elimina(criterio) no implementado.");
     }
 
     /**
@@ -125,7 +168,8 @@ public class Tabla {
      * @return el esquema de la tabla
      */
     public Esquema getEsquema() {
-        throw new UnsupportedOperationException("Tabla::getEsquema() no implementado.");
+        return esquema;
+        //throw new UnsupportedOperationException("Tabla::getEsquema() no implementado.");
     }
 
     /**
@@ -135,7 +179,13 @@ public class Tabla {
      * @return Una lista con los nombres de las claves de la tabla
      */
     public List<String> getCabeceras() {
-        throw new UnsupportedOperationException("Tabla::getCabeceras() no implementado.");
+        Iterator<Clave> it = esquema.iterator();
+        List<String> cabeceras = new LinkedList<>();
+        while (it.hasNext()) {
+            cabeceras.add(it.next().getNombre());
+        }
+        return cabeceras;
+        //throw new UnsupportedOperationException("Tabla::getCabeceras() no implementado.");
     }
 
     /**
@@ -152,6 +202,8 @@ public class Tabla {
      * @param ascendente Si se debe ordenar en ascendente o descendente.
      */
     public void ordena(String columnaAOrdenar, boolean ascendente) {
-        throw new UnsupportedOperationException("Tabla::ordena(columnaAOrdenar,ascendente) no implementado.");
+        Comparator<FilaDatos> comparador = new ComparadorFilas(columnaAOrdenar, ascendente);
+        Collections.sort(filas, comparador);
+        //throw new UnsupportedOperationException("Tabla::ordena(columnaAOrdenar,ascendente) no implementado.");
     }
 }
